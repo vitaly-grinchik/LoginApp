@@ -5,5 +5,6 @@
 //  Created by Виталий Гринчик on 3.12.22.
 //
 
+var userName = "Alex"
 
-var users = ["Alex": "Swiftbook"]
+var passwords = ["Alex": "Swiftbook"]
