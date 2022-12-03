@@ -114,6 +114,9 @@
                                 <rect key="frame" x="156" y="692" width="78" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutButtonTapped" destination="XLS-rx-JKu" eventType="touchUpInside" id="ODL-d0-XCX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rw4-Nj-1E3"/>
@@ -125,6 +128,9 @@
                             <constraint firstItem="rw4-Nj-1E3" firstAttribute="bottom" secondItem="Kn5-M4-xJL" secondAttribute="bottom" constant="77" id="mkK-3J-F54"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="IPi-Y7-pmi" id="at0-3J-kKm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKB-pa-yey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
