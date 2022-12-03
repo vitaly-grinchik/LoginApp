@@ -11,31 +11,42 @@ class LoginViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet weak var userNameField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var userPasswordField: UITextField!
     
     // MARK: - IB Actions
     @IBAction func loginButtonTapped() {
+        showAlert("Invalid Login or Password",
+                  "Please, enter correct Login and Password")
+        { _ in
+            self.userNameField.text = ""
+            self.userPasswordField.text = ""
+        }
     }
     
     @IBAction func forgotNameButtonTapped() {
-        showPromptingAlert("Ooops!", "Your name: \(userName)")
+        showAlert("Oops!",
+                  "Your name: \(userName)")
+        {_ in }
     }
     
     @IBAction func forgotPassButtonTapped() {
         guard let password = passwords[userName] else { return }
-        showPromptingAlert("OK", "Your password: " + password)
+        showAlert("Oops!",
+                  "Your password: " + password)
+        {_ in }
     }
 }
 
 // MARK: - Extensions
 extension LoginViewController {
-    func showPromptingAlert(_ title: String, _ message: String) {
+    func showAlert(_ title: String,
+                   _ message: String,
+                   _ handler: ((UIAlertAction) -> Void)?)
+    {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: handler)
         
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-    
 }

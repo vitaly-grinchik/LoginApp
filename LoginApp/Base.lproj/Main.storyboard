@@ -76,8 +76,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordField" destination="b7P-l5-Ahm" id="hj0-mO-Mfy"/>
                         <outlet property="userNameField" destination="bcV-U0-boQ" id="THk-cn-ue2"/>
+                        <outlet property="userPasswordField" destination="b7P-l5-Ahm" id="hj0-mO-Mfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
