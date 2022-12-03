@@ -6,4 +6,4 @@
 //
 
 
-var users = ["User": "Password"]
+var users = ["Alex": "Swiftbook"]
