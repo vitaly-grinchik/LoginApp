@@ -26,14 +26,12 @@ class LoginViewController: UIViewController {
     @IBAction func forgotNameButtonTapped() {
         showAlert("Oops!",
                   "Your name: \(userName)")
-        {_ in }
     }
     
     @IBAction func forgotPassButtonTapped() {
         guard let password = passwords[userName] else { return }
         showAlert("Oops!",
                   "Your password: " + password)
-        {_ in }
     }
 }
 
@@ -41,7 +39,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     func showAlert(_ title: String,
                    _ message: String,
-                   _ handler: ((UIAlertAction) -> Void)?)
+                   _ handler: ((UIAlertAction) -> Void)? = nil)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: handler)
