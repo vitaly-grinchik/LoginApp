@@ -13,13 +13,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var userPasswordField: UITextField!
     
-    // MARK: - IB Actions
-    @IBAction func loginButtonTapped() {
-        showAlert("Invalid Login or Password",
-                  "Please, enter correct Login and Password")
-        { _ in
-            self.userNameField.text = ""
-            self.userPasswordField.text = ""
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if userNameField.text == userName, userPasswordField.text == userPassword {
+            guard let welcomVC = segue.destination as? WelcomeViewController else { return }
+            welcomVC.userGreeting = "Welcome, " + userName + "!"
+        } else {
+            showAlert("Invalid Login or Password",
+                      "Please, enter correct Login and Password")
+            { _ in
+                self.userNameField.text = ""
+                self.userPasswordField.text = ""
+            }
         }
     }
     
@@ -29,9 +33,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPassButtonTapped() {
-        guard let password = passwords[userName] else { return }
         showAlert("Oops!",
-                  "Your password: " + password)
+                  "Your password: " + userPassword)
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userPasswordField.text = ""
     }
 }
 

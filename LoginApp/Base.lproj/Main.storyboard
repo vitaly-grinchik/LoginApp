@@ -33,7 +33,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
-                                            <action selector="loginButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZG-D8-knk"/>
+                                            <segue destination="XLS-rx-JKu" kind="show" id="dhc-gb-Fwf"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="xCE-Mg-Akc">
@@ -89,11 +89,11 @@
             <objects>
                 <viewController id="XLS-rx-JKu" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ENg-tO-cb7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="XZd-7D-lns">
-                                <rect key="frame" x="76.333333333333329" y="225" width="237.66666666666669" height="171.66666666666663"/>
+                                <rect key="frame" x="76.333333333333329" y="181" width="237.66666666666669" height="171.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Guy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPi-Y7-pmi">
                                         <rect key="frame" x="0.0" y="0.0" width="237.66666666666666" height="44.333333333333336"/>
@@ -110,11 +110,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn5-M4-xJL">
-                                <rect key="frame" x="156" y="692" width="78" height="41"/>
+                                <rect key="frame" x="156" y="638" width="78" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
-                                    <action selector="logoutButtonTapped" destination="XLS-rx-JKu" eventType="touchUpInside" id="ODL-d0-XCX"/>
+                                    <segue destination="Xcj-l2-fmh" kind="unwind" unwindAction="unwindFor:" id="aD9-TP-NfK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,11 +127,13 @@
                             <constraint firstItem="rw4-Nj-1E3" firstAttribute="bottom" secondItem="Kn5-M4-xJL" secondAttribute="bottom" constant="77" id="mkK-3J-F54"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5ma-nK-PVo"/>
                     <connections>
                         <outlet property="greetingLabel" destination="IPi-Y7-pmi" id="at0-3J-kKm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKB-pa-yey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Xcj-l2-fmh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="903" y="102"/>
         </scene>

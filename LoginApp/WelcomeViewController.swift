@@ -10,11 +10,11 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var greetingLabel: UILabel!
+    
+    var userGreeting: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        greetingLabel.text = userGreeting
     }
-    @IBAction func logoutButtonTapped() {
-    }
-    
 }
