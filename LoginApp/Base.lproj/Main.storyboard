@@ -91,7 +91,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="XZd-7D-lns">
-                                <rect key="frame" x="76.333333333333329" y="181" width="237.66666666666669" height="171.66666666666663"/>
+                                <rect key="frame" x="76.333333333333329" y="309.33333333333331" width="237.66666666666669" height="171.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Guy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPi-Y7-pmi">
                                         <rect key="frame" x="0.0" y="0.0" width="237.66666666666666" height="44.333333333333336"/>
@@ -100,7 +100,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVb-Tb-Ssf">
-                                        <rect key="frame" x="79.333333333333329" y="84.333333333333314" width="78.999999999999986" height="87.333333333333314"/>
+                                        <rect key="frame" x="79.333333333333329" y="84.333333333333371" width="78.999999999999986" height="87.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="73"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -108,7 +108,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn5-M4-xJL">
-                                <rect key="frame" x="156" y="638" width="78" height="41"/>
+                                <rect key="frame" x="156" y="685" width="78" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
@@ -119,10 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="rw4-Nj-1E3"/>
                         <color key="backgroundColor" red="0.77159680188585988" green="1" blue="0.76782868029361206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XZd-7D-lns" firstAttribute="centerX" secondItem="ENg-tO-cb7" secondAttribute="centerX" id="CAA-HS-BXG"/>
                             <constraint firstItem="XZd-7D-lns" firstAttribute="centerX" secondItem="ENg-tO-cb7" secondAttribute="centerX" id="JnX-QU-BUg"/>
                             <constraint firstItem="Kn5-M4-xJL" firstAttribute="centerX" secondItem="ENg-tO-cb7" secondAttribute="centerX" id="RMe-uk-PrR"/>
-                            <constraint firstItem="XZd-7D-lns" firstAttribute="top" secondItem="rw4-Nj-1E3" secondAttribute="top" constant="181" id="g06-c6-fUk"/>
-                            <constraint firstItem="rw4-Nj-1E3" firstAttribute="bottom" secondItem="Kn5-M4-xJL" secondAttribute="bottom" constant="77" id="mkK-3J-F54"/>
+                            <constraint firstItem="XZd-7D-lns" firstAttribute="centerY" secondItem="ENg-tO-cb7" secondAttribute="centerY" id="ls7-Fo-xyt"/>
+                            <constraint firstItem="rw4-Nj-1E3" firstAttribute="bottom" secondItem="Kn5-M4-xJL" secondAttribute="bottom" constant="30" id="mkK-3J-F54"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ma-nK-PVo"/>
