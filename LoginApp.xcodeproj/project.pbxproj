@@ -62,8 +62,8 @@
 			children = (
 				D8BD4E11293A802800D63077 /* AppDelegate.swift */,
 				D8BD4E13293A802800D63077 /* SceneDelegate.swift */,
-				D8BD4E15293A802800D63077 /* LoginViewController.swift */,
 				D8BD4E27293BDE2700D63077 /* UserData.swift */,
+				D8BD4E15293A802800D63077 /* LoginViewController.swift */,
 				D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */,
 				D8BD4E17293A802800D63077 /* Main.storyboard */,
 				D8BD4E1A293A803000D63077 /* Assets.xcassets */,
