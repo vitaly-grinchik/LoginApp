@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
             guard let welcomVC = segue.destination as? WelcomeViewController else { return }
             welcomVC.userGreeting = "Welcome, " + userName + "!"
         } else {
-            showAlert("Invalid Login or Password",
-                      "Please, enter correct Login and Password")
+            showAlert("Invalid login or password",
+                      "Please, enter correct login and password")
             { _ in
                 self.userNameField.text = ""
                 self.userPasswordField.text = ""
@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameField.text = ""
         userPasswordField.text = ""
     }
 }
