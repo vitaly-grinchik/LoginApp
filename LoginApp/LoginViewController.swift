@@ -26,6 +26,11 @@ class LoginViewController: UIViewController {
             }
         }
     }
+   
+// TODO: Метод для скрытия клавиатуры тапом по экрану - Я НЕ ПОНИМАЮ. КАК ЭТО РЕАЛИЗОВАТЬ
+//    override func touchesBegan(_ touches: Set, with event: UIEvent?) {
+//        super .touchesBegan(touches, with: event)
+//    }
     
     @IBAction func forgotNameButtonTapped() {
         showAlert("Oops!",

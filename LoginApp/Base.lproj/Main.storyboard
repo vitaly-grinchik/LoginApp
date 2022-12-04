@@ -21,7 +21,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bcV-U0-boQ">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartInsertDeleteType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7P-l5-Ahm">
                                         <rect key="frame" x="0.0" y="59" width="330" height="34"/>
@@ -70,6 +70,7 @@
                             <constraint firstItem="mkH-OW-P3E" firstAttribute="trailing" secondItem="e0f-u1-CWM" secondAttribute="trailing" id="osA-6h-ftG"/>
                             <constraint firstItem="OFn-b7-gMU" firstAttribute="top" secondItem="e0f-u1-CWM" secondAttribute="bottom" constant="25" id="tEU-qK-bFf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e0f-u1-CWM" secondAttribute="trailing" constant="30" id="xyp-Cj-PCA"/>
+                            <constraint firstItem="mkH-OW-P3E" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OFn-b7-gMU" secondAttribute="trailing" constant="8" symbolic="YES" id="yZk-lw-j5x"/>
                             <constraint firstItem="OFn-b7-gMU" firstAttribute="leading" secondItem="e0f-u1-CWM" secondAttribute="leading" id="zai-bx-IwD"/>
                         </constraints>
                     </view>
