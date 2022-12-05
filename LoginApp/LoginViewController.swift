@@ -24,17 +24,15 @@ class LoginViewController: UIViewController {
         } else {
             showAlert("Invalid login or password",
                       "Please, enter correct login and password")
-            { _ in
-                self.userPasswordField.text = ""
-            }
+                { _ in self.userPasswordField.text = "" }
         }
     }
    
-// TODO: Метод для скрытия клавиатуры тапом по экрану - Я НЕ ПОНИМАЮ. КАК ЭТО РЕАЛИЗОВАТЬ
-    override func touchesBegan(_ touches: Set, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
+//// TODO: Метод для скрытия клавиатуры тапом по экрану - Я НЕ ПОНИМАЮ. КАК ЭТО РЕАЛИЗОВАТЬ
+//    override func touchesBegan(_ touches: Set, with event: UIEvent?) {
+//        super.touchesBegan(touches, with: event)
+//        view.endEditing(true)
+//    }
     
     @IBAction func forgotNameButtonTapped() {
         showAlert("Oops!",
