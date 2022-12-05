@@ -14,7 +14,6 @@
 		D8BD4E1B293A803000D63077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BD4E1A293A803000D63077 /* Assets.xcassets */; };
 		D8BD4E1E293A803000D63077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BD4E1C293A803000D63077 /* LaunchScreen.storyboard */; };
 		D8BD4E26293A88AE00D63077 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */; };
-		D8BD4E28293BDE2700D63077 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD4E27293BDE2700D63077 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		D8BD4E1D293A803000D63077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8BD4E1F293A803000D63077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		D8BD4E27293BDE2700D63077 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 			children = (
 				D8BD4E11293A802800D63077 /* AppDelegate.swift */,
 				D8BD4E13293A802800D63077 /* SceneDelegate.swift */,
-				D8BD4E27293BDE2700D63077 /* UserData.swift */,
 				D8BD4E15293A802800D63077 /* LoginViewController.swift */,
 				D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */,
 				D8BD4E17293A802800D63077 /* Main.storyboard */,
@@ -146,7 +143,6 @@
 				D8BD4E16293A802800D63077 /* LoginViewController.swift in Sources */,
 				D8BD4E26293A88AE00D63077 /* WelcomeViewController.swift in Sources */,
 				D8BD4E12293A802800D63077 /* AppDelegate.swift in Sources */,
-				D8BD4E28293BDE2700D63077 /* UserData.swift in Sources */,
 				D8BD4E14293A802800D63077 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
