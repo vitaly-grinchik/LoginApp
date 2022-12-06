@@ -33,7 +33,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
-                                            <segue destination="XLS-rx-JKu" kind="show" id="dhc-gb-Fwf"/>
+                                            <action selector="loginTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="5eh-hY-JRA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -77,6 +77,7 @@
                     <connections>
                         <outlet property="userNameField" destination="bcV-U0-boQ" id="THk-cn-ue2"/>
                         <outlet property="userPasswordField" destination="b7P-l5-Ahm" id="hj0-mO-Mfy"/>
+                        <segue destination="XLS-rx-JKu" kind="show" identifier="showWelcomVC" id="P0C-xJ-90i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

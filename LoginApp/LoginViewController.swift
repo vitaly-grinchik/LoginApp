@@ -17,20 +17,23 @@ class LoginViewController: UIViewController {
     private let userPassword = "Swiftbook"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomVC = segue.destination as? WelcomeViewController else { return }
+        welcomVC.userName = userName
+    }
+   
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    @IBAction func loginTapped() {
         if userNameField.text == userName, userPasswordField.text == userPassword {
-            guard let welcomVC = segue.destination as? WelcomeViewController else { return }
-            welcomVC.userName = userName
-        } else {
+            performSegue(withIdentifier: "showWelcomVC", sender: nil)
+       } else {
             showAlert("Invalid login or password",
                       "Please, enter correct login and password")
                 { _ in self.userPasswordField.text = "" }
         }
-    }
-   
-//// TODO: Метод для скрытия клавиатуры тапом по экрану - Я НЕ ПОНИМАЮ. КАК ЭТО РЕАЛИЗОВАТЬ
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
     }
     
     @IBAction func forgotNameButtonTapped() {
