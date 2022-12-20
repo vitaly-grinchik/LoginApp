@@ -13,9 +13,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var userPasswordField: UITextField!
     
+    // MARK: - Private properties
     private let userName = "Vitaly"
     private let userPassword = "Swiftbook"
     
+    // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomVC = segue.destination as? WelcomeViewController else { return }
         welcomVC.userName = userName
@@ -26,6 +28,7 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    // MARK: - IB Actions
     @IBAction func loginTapped() {
         if userNameField.text == userName, userPasswordField.text == userPassword {
             performSegue(withIdentifier: "showWelcomVC", sender: nil)
