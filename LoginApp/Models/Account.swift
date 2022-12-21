@@ -23,7 +23,7 @@ struct Person {
     let age: Int
     let contact: Contact
     let intro: String
-    let photoURL: URL
+    let photoFileName: String
 }
 
 struct Contact {
