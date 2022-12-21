@@ -15,6 +15,7 @@
 		D8BD4E1E293A803000D63077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BD4E1C293A803000D63077 /* LaunchScreen.storyboard */; };
 		D8BD4E26293A88AE00D63077 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */; };
 		D8C46EC0295317AB0091EB5D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C46EBF295317AB0091EB5D /* Account.swift */; };
+		D8C46EC22953220C0091EB5D /* UsesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C46EC12953220C0091EB5D /* UsesData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D8BD4E1F293A803000D63077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D8C46EBF295317AB0091EB5D /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		D8C46EC12953220C0091EB5D /* UsesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				D8C46EBF295317AB0091EB5D /* Account.swift */,
+				D8C46EC12953220C0091EB5D /* UsesData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8C46EC0295317AB0091EB5D /* Account.swift in Sources */,
+				D8C46EC22953220C0091EB5D /* UsesData.swift in Sources */,
 				D8BD4E16293A802800D63077 /* LoginViewController.swift in Sources */,
 				D8BD4E26293A88AE00D63077 /* WelcomeViewController.swift in Sources */,
 				D8BD4E12293A802800D63077 /* AppDelegate.swift in Sources */,

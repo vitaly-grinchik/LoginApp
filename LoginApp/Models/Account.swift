@@ -21,7 +21,7 @@ struct Person {
     let surname: String
     let age: Int
     let contact: Contact
-    var intro: String
+    let intro: String
 }
 
 struct Contact {
