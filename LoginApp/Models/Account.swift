@@ -4,6 +4,7 @@
 //
 //  Created by Виталий Гринчик on 21.12.22.
 //
+import Foundation
 
 struct Account {
     let userName: String
@@ -22,6 +23,7 @@ struct Person {
     let age: Int
     let contact: Contact
     let intro: String
+    let photoURL: URL
 }
 
 struct Contact {
