@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -93,24 +94,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="XZd-7D-lns">
-                                <rect key="frame" x="76.333333333333329" y="336.33333333333331" width="237.66666666666669" height="171.66666666666669"/>
+                                <rect key="frame" x="15" y="260" width="360" height="324.33333333333326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Guy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPi-Y7-pmi">
-                                        <rect key="frame" x="0.0" y="0.0" width="237.66666666666666" height="44.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, _!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPi-Y7-pmi">
+                                        <rect key="frame" x="83.666666666666671" y="0.0" width="192.66666666666663" height="44.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVb-Tb-Ssf">
-                                        <rect key="frame" x="79.333333333333329" y="84.333333333333371" width="78.999999999999986" height="87.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="73"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QC5-tq-j3w">
+                                        <rect key="frame" x="60" y="84.333333333333314" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="QC5-tq-j3w" secondAttribute="height" multiplier="1:1" id="RNd-ok-5jz"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="QC5-tq-j3w" firstAttribute="leading" secondItem="XZd-7D-lns" secondAttribute="leading" constant="60" id="bo9-Cz-GB9"/>
+                                    <constraint firstAttribute="trailing" secondItem="QC5-tq-j3w" secondAttribute="trailing" constant="60" id="p3V-Hd-tWP"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn5-M4-xJL">
-                                <rect key="frame" x="156" y="739" width="78" height="41"/>
+                                <rect key="frame" x="156" y="719" width="78" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
@@ -125,12 +130,13 @@
                             <constraint firstItem="XZd-7D-lns" firstAttribute="centerX" secondItem="ENg-tO-cb7" secondAttribute="centerX" id="JnX-QU-BUg"/>
                             <constraint firstItem="Kn5-M4-xJL" firstAttribute="centerX" secondItem="ENg-tO-cb7" secondAttribute="centerX" id="RMe-uk-PrR"/>
                             <constraint firstItem="XZd-7D-lns" firstAttribute="centerY" secondItem="ENg-tO-cb7" secondAttribute="centerY" id="ls7-Fo-xyt"/>
-                            <constraint firstItem="rw4-Nj-1E3" firstAttribute="bottom" secondItem="Kn5-M4-xJL" secondAttribute="bottom" constant="30" id="mkK-3J-F54"/>
+                            <constraint firstItem="rw4-Nj-1E3" firstAttribute="bottom" secondItem="Kn5-M4-xJL" secondAttribute="bottom" constant="50" id="mkK-3J-F54"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ma-nK-PVo"/>
                     <connections>
                         <outlet property="greetingLabel" destination="IPi-Y7-pmi" id="at0-3J-kKm"/>
+                        <outlet property="userPhoto" destination="QC5-tq-j3w" id="JhN-sL-jW5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKB-pa-yey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -138,5 +144,40 @@
             </objects>
             <point key="canvasLocation" x="903" y="102"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="qsG-fs-ncc">
+            <objects>
+                <viewController id="vae-Yc-ph9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ils-Qe-U5g">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WNl-wK-oc4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vk5-7q-3L0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cpW-Fu-G1f">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4a-Tg-R2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="jjC-IP-tnq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X3R-OW-oba">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1Rc-U2-Fcd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2557" y="152"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

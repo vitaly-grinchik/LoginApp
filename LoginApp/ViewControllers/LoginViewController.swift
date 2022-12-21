@@ -14,13 +14,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userPasswordField: UITextField!
     
     // MARK: - Private properties
-    private let userName = account.userName
-    private let userPassword = account.userPassword
+    private let currentAccount = account
     
     // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomVC = segue.destination as? WelcomeViewController else { return }
-        welcomVC.userName = userName
+        welcomVC.user = currentAccount
     }
    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -30,7 +29,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func loginTapped() {
-        if userNameField.text == userName, userPasswordField.text == userPassword {
+        if userNameField.text == currentAccount.userName, userPasswordField.text == currentAccount.userPassword {
             performSegue(withIdentifier: "showWelcomVC", sender: nil)
        } else {
             showAlert("Invalid login or password",
@@ -41,12 +40,12 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotNameButtonTapped() {
         showAlert("Oops!",
-                  "Your name: \(userName)")
+                  "Your name: \(currentAccount.userName)")
     }
     
     @IBAction func forgotPassButtonTapped() {
         showAlert("Oops!",
-                  "Your password: " + userPassword)
+                  "Your password: " + currentAccount.userPassword)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

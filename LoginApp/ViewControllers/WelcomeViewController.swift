@@ -11,10 +11,20 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var greetingLabel: UILabel!
     
-    var userName: String!
+    @IBOutlet weak var userPhoto: UIImageView!
+    var user: Account!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingLabel.text = "Welcome, " + userName + "!"
+        greetingLabel.text = "Welcome, " + user.userName + "!"
+        
+        setupUserPhoto()
+        
+    }
+    
+    private func setupUserPhoto() {
+        userPhoto.image = UIImage(contentsOfFile: user.userInfo.photoFileName)
+        userPhoto.contentMode = .scaleAspectFill
+        
     }
 }

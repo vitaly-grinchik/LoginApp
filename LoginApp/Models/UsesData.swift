@@ -17,15 +17,16 @@ let person = Person(name: "Виталий",
                        age: 49,
                        contact: contact,
                        intro: intro,
-                       photoFileName: "gvm")
+                       photoFileName: "GVM")
+
+
+let contact = Contact(email: "vitaly.grinchik@gmail.com",
+                      phone: phoneNumbers, address: address)
 
 let intro =
     """
 Кратко о себе...
 """
-
-let contact = Contact(email: "vitaly.grinchik@gmail.com",
-                      phone: phoneNumbers, address: address)
 
 let phoneNumbers = [
     PhoneNumber(number: "+375 33 120-88-06", type: .cell),
