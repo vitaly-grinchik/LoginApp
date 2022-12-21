@@ -45,8 +45,8 @@ struct Address {
     let appartment: String
 }
 
-enum PhoneType {
-    case cell
-    case home
-    case work
+enum PhoneType: String {
+    case cell = "📱"
+    case home = "🏠"
+    case work = "☎️"
 }

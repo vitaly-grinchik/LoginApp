@@ -5,7 +5,7 @@
 //  Created by Виталий Гринчик on 21.12.22.
 //
 
-let account = Account(userName: "vitaly",
+let account = Account(userName: "Vitaly",
                          userPassword: "Swiftbook",
                          isActive: true,
                          recoveryQuestion: "Девичья фамилия матери",

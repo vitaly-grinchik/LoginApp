@@ -114,7 +114,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Log out"/>
                                 <connections>
-                                    <segue destination="Xcj-l2-fmh" kind="unwind" unwindAction="unwindFor:" id="aD9-TP-NfK"/>
+                                    <segue destination="Xcj-l2-fmh" kind="unwind" unwindAction="unwindFor:" id="0fO-D2-iNl"/>
                                 </connections>
                             </button>
                         </subviews>
