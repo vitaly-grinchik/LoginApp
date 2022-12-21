@@ -5,14 +5,14 @@
 //  Created by Виталий Гринчик on 21.12.22.
 //
 
-let gvmAccount = Account(userName: "vitaly",
+let account = Account(userName: "vitaly",
                          userPassword: "Swiftbook",
                          isActive: true,
-                         recoveryQuestion: "",
-                         recoveryAnswer: "",
-                         userInfo: gvmPerson)
+                         recoveryQuestion: "Девичья фамилия матери",
+                         recoveryAnswer: "Иванова",
+                         userInfo: person)
 
-let gvmPerson = Person(name: "Виталий",
+let person = Person(name: "Виталий",
                        surname: "Гринчик",
                        age: 49,
                        contact: contact,
