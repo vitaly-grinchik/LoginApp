@@ -9,13 +9,13 @@ var account = Account(userName: "1", userPassword: "1", isActive: true, recovery
 
 var person = Person(name: "Vitaly", surname: "Grinchik", age: 49, contacts: contacts, intro: intro, photoFileName: "GVM", address: address)
 
-var contacts = [Contact(type: .cellPhone, contact: "+375 33 120-88-06"),
-                Contact(type: .homePhone, contact: "+375 17 212-12-65"),
-                Contact(type: .workPhone, contact: "+375 17 332-76-44"),
-                Contact(type: .privateEmail, contact: "private@email.com"),
-                Contact(type: .workEmail, contact: "work@email.com"),
-                Contact(type: .social, contact: "@virtuallizer"),
-                Contact(type: .webAddress, contact: "mypage.com")]
+var contacts: [ContactType: String] = [.mobilePhone: "+375 33 120-88-06",
+                                       .homePhone: "+375 17 212-12-65",
+                                       .workPhone: "+375 17 332-76-44",
+                                       .privateEmail: "private@email.com",
+                                       .workEmail: "work@email.com",
+                                       .twitter: "@virtualizer",
+                                       .webAddress: "mypage.com"]
 
 var address = Address(state: "Belarus", city: "Minsk", street: "Pobeditelej Ave.", building: "75А", appartment: "100")
 

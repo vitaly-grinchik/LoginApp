@@ -23,7 +23,7 @@ final class EditContactViewController: UIViewController {
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    
+    var user: Account!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -17,8 +17,8 @@ final class ContactViewController: UIViewController {
     @IBOutlet weak var mobilePhoneLabel: UILabel!
     @IBOutlet weak var privateEmailLabel: UILabel!
     @IBOutlet weak var homePhoneLabel: UILabel!
-    @IBOutlet weak var officePhoneLabel: UILabel!
-    @IBOutlet weak var officeEmailLabel: UILabel!
+    @IBOutlet weak var workPhoneLabel: UILabel!
+    @IBOutlet weak var workEmailLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressCityLabel: UILabel!
     @IBOutlet weak var addressStateLabel: UILabel!
@@ -27,6 +27,23 @@ final class ContactViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fillInLabels()
+    }
+    
+    private func fillInLabels() {
+        userNameLabel.text = user.info.name
+        userSurnameLabel.text = user.info.surname
+        
+        mobilePhoneLabel.text = user.info.contacts[.mobilePhone]
+        privateEmailLabel.text = user.info.contacts[.privateEmail]
+        
+        homePhoneLabel.text = user.info.contacts[.homePhone]
+        
+        workPhoneLabel.text = user.info.contacts[.workPhone]
+        workEmailLabel.text = user.info.contacts[.workEmail]
+        
+        addressLabel.text = user.info.address.addressString
+        addressCityLabel.text = user.info.address.city
+        addressStateLabel.text = user.info.address.state
     }
 }

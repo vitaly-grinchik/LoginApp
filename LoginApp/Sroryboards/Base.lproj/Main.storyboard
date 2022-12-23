@@ -96,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="XZd-7D-lns">
-                                <rect key="frame" x="32" y="177" width="311" height="313"/>
+                                <rect key="frame" x="32" y="211.5" width="311" height="244.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, _!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPi-Y7-pmi">
                                         <rect key="frame" x="59" y="0.0" width="193" height="44.5"/>
@@ -105,14 +105,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QC5-tq-j3w">
-                                        <rect key="frame" x="41" y="84.5" width="229" height="228.5"/>
+                                        <rect key="frame" x="75.5" y="84.5" width="160" height="160"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="QC5-tq-j3w" secondAttribute="height" multiplier="1:1" id="RNd-ok-5jz"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="QC5-tq-j3w" firstAttribute="width" secondItem="XZd-7D-lns" secondAttribute="width" multiplier="0.736196" id="oLp-bq-VNn"/>
+                                    <constraint firstItem="QC5-tq-j3w" firstAttribute="width" secondItem="XZd-7D-lns" secondAttribute="width" multiplier="0.514469" id="POn-hB-cUl"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kn5-M4-xJL">
@@ -156,7 +156,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZKB-pa-yey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Xcj-l2-fmh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="903" y="102"/>
+            <point key="canvasLocation" x="901.60000000000002" y="101.19940029985008"/>
         </scene>
         <!--Info-->
         <scene sceneID="Xq8-DN-enh">
@@ -384,12 +384,12 @@
                         <outlet property="addressStateLabel" destination="cuF-Se-dGP" id="JDe-dV-FeN"/>
                         <outlet property="homePhoneLabel" destination="fA9-1Q-GWO" id="bat-7W-SVO"/>
                         <outlet property="mobilePhoneLabel" destination="36Q-6v-org" id="BXn-Zx-E4r"/>
-                        <outlet property="officeEmailLabel" destination="Wid-lV-Vt1" id="23l-sQ-HCg"/>
-                        <outlet property="officePhoneLabel" destination="bxE-Ia-hJD" id="3RG-TP-fbE"/>
                         <outlet property="privateEmailLabel" destination="24g-cb-W6o" id="89W-Dj-FiS"/>
                         <outlet property="userNameLabel" destination="XuO-0r-pla" id="ZND-fE-GWM"/>
                         <outlet property="userPhoto" destination="awQ-4C-i2d" id="Btr-QF-O4I"/>
                         <outlet property="userSurnameLabel" destination="MBy-ca-aCb" id="0MO-92-QE0"/>
+                        <outlet property="workEmailLabel" destination="Wid-lV-Vt1" id="23l-sQ-HCg"/>
+                        <outlet property="workPhoneLabel" destination="bxE-Ia-hJD" id="3RG-TP-fbE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xt3-t7-2uy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

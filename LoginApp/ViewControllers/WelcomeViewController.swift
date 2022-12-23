@@ -16,12 +16,22 @@ final class WelcomeViewController: UIViewController {
     var user: Account!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let tabBarViewControllers = tabBarVC.viewControllers else { return }
-        tabBarViewControllers.forEach { vc in
-            switch vc {
+        
+        tabBarViewControllers.forEach { viewController in
+            switch viewController {
             case let aboutVC as AboutViewController: aboutVC.user = user
-            case let contactVC as ContactViewController: contactVC.user = user
+            case let navigationVC as UINavigationController:
+                let naviVCs = navigationVC.viewControllers
+                naviVCs.forEach { viewController in
+                    switch viewController {
+                    case let contactVC as ContactViewController: contactVC.user = user
+                    case let editContactVC as EditContactViewController: editContactVC.user = user
+                    default: return
+                    }
+                }
             default: return
             }
         }

@@ -21,15 +21,10 @@ struct Person {
     let name: String
     let surname: String
     let age: Int
-    var contacts: [Contact]
+    var contacts: [ContactType: String]
     let intro: String
     let photoFileName: String
     var address: Address
-}
-
-struct Contact {
-    var type: ContactType
-    var contact: String
 }
 
 struct Address {
@@ -38,14 +33,20 @@ struct Address {
     var street: String
     var building: String
     var appartment: String
+    
+    var addressString: String {
+        "\(appartment)-\(building), \(street)"
+    }
 }
 
 enum ContactType {
-    case cellPhone
+    case mobilePhone
     case homePhone
     case workPhone
     case privateEmail
     case workEmail
-    case social
+    case twitter
+    case linkedId
+    case facebook
     case webAddress
 }
