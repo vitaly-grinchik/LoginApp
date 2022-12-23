@@ -5,33 +5,22 @@
 //  Created by Виталий Гринчик on 21.12.22.
 //
 
-let account = Account(userName: "Vitaly",
-                         userPassword: "Swiftbook",
-                         isActive: true,
-                         recoveryQuestion: "Девичья фамилия матери",
-                         recoveryAnswer: "Иванова",
-                         userInfo: person)
+var account = Account(userName: "1", userPassword: "1", isActive: true, recoveryQuestion: "", recoveryAnswer: "", info: person)
 
-let person = Person(name: "Виталий",
-                       surname: "Гринчик",
-                       age: 49,
-                       contact: contact,
-                       intro: intro,
-                       photoFileName: "GVM")
+var person = Person(name: "Vitaly", surname: "Grinchik", age: 49, contacts: contacts, intro: intro, photoFileName: "GVM", address: address)
 
+var contacts = [Contact(type: .cellPhone, contact: "+375 33 120-88-06"),
+                Contact(type: .homePhone, contact: "+375 17 212-12-65"),
+                Contact(type: .workPhone, contact: "+375 17 332-76-44"),
+                Contact(type: .privateEmail, contact: "private@email.com"),
+                Contact(type: .workEmail, contact: "work@email.com"),
+                Contact(type: .social, contact: "@virtuallizer"),
+                Contact(type: .webAddress, contact: "mypage.com")]
 
-let contact = Contact(email: "vitaly.grinchik@gmail.com",
-                      phone: phoneNumbers, address: address)
+var address = Address(state: "Belarus", city: "Minsk", street: "Pobeditelej Ave.", building: "75А", appartment: "100")
 
-let intro =
-    """
-Кратко о себе...
+var intro = """
+If a mutable approach isn’t your thing, then below you’ll find an alternative immutable variant that generates a deck using flatMap and map. Notice how deck is a constant, denoted by a let.
+
+We’ll start by iterating over all suits, then inside each iteration, we’ll iterate over all faces. We’ll use map to return a Card. To prevent ending up with a nested array, we use flatMap to flatten the array.
 """
-
-let phoneNumbers = [
-    PhoneNumber(number: "+375 33 120-88-06", type: .cell),
-    PhoneNumber(number: "+375 17 212-12-65", type: .home),
-    PhoneNumber(number: "+375 17 332-76-44", type: .work)
-]
-
-let address = Address(state: "Беларусь", city: "Минск", street: "Победителей", building: "75А", appartment: "100")

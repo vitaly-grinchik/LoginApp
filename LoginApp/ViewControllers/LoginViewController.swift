@@ -7,14 +7,14 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     // MARK: - IB Outlets
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var userPasswordField: UITextField!
     
     // MARK: - Private properties
-    private let currentAccount = account
+    private var currentAccount = account
     
     // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

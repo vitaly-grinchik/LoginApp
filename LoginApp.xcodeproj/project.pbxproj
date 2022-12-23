@@ -16,6 +16,9 @@
 		D8BD4E26293A88AE00D63077 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */; };
 		D8C46EC0295317AB0091EB5D /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C46EBF295317AB0091EB5D /* Account.swift */; };
 		D8C46EC22953220C0091EB5D /* UsesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C46EC12953220C0091EB5D /* UsesData.swift */; };
+		D8C46EC629536D8E0091EB5D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C46EC529536D8E0091EB5D /* AboutViewController.swift */; };
+		D8C46EC829536DAF0091EB5D /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C46EC729536DAF0091EB5D /* ContactViewController.swift */; };
+		D8C46ECA2954C7090091EB5D /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C46EC92954C7090091EB5D /* EditContactViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D8C46EBF295317AB0091EB5D /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		D8C46EC12953220C0091EB5D /* UsesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsesData.swift; sourceTree = "<group>"; };
+		D8C46EC529536D8E0091EB5D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		D8C46EC729536DAF0091EB5D /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		D8C46EC92954C7090091EB5D /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 			children = (
 				D8BD4E15293A802800D63077 /* LoginViewController.swift */,
 				D8BD4E25293A88AE00D63077 /* WelcomeViewController.swift */,
+				D8C46EC529536D8E0091EB5D /* AboutViewController.swift */,
+				D8C46EC729536DAF0091EB5D /* ContactViewController.swift */,
+				D8C46EC92954C7090091EB5D /* EditContactViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,7 +198,10 @@
 				D8C46EC0295317AB0091EB5D /* Account.swift in Sources */,
 				D8C46EC22953220C0091EB5D /* UsesData.swift in Sources */,
 				D8BD4E16293A802800D63077 /* LoginViewController.swift in Sources */,
+				D8C46EC629536D8E0091EB5D /* AboutViewController.swift in Sources */,
 				D8BD4E26293A88AE00D63077 /* WelcomeViewController.swift in Sources */,
+				D8C46ECA2954C7090091EB5D /* EditContactViewController.swift in Sources */,
+				D8C46EC829536DAF0091EB5D /* ContactViewController.swift in Sources */,
 				D8BD4E12293A802800D63077 /* AppDelegate.swift in Sources */,
 				D8BD4E14293A802800D63077 /* SceneDelegate.swift in Sources */,
 			);

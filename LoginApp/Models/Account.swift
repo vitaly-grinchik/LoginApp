@@ -7,46 +7,45 @@
 import Foundation
 
 struct Account {
-    let userName: String
-    let userPassword: String
+    var userName: String
+    var userPassword: String
     
-    let isActive: Bool
-    let recoveryQuestion: String
-    let recoveryAnswer: String
+    var isActive: Bool
+    var recoveryQuestion: String
+    var recoveryAnswer: String
     
-    let userInfo: Person
+    var info: Person
 }
 
 struct Person {
     let name: String
     let surname: String
     let age: Int
-    let contact: Contact
+    var contacts: [Contact]
     let intro: String
     let photoFileName: String
+    var address: Address
 }
 
 struct Contact {
-    let email: String
-    let phone: [PhoneNumber]
-    let address: Address
-}
-
-struct PhoneNumber {
-    let number: String
-    let type: PhoneType
+    var type: ContactType
+    var contact: String
 }
 
 struct Address {
-    let state: String
-    let city: String
-    let street: String
-    let building: String
-    let appartment: String
+    var state: String
+    var city: String
+    var street: String
+    var building: String
+    var appartment: String
 }
 
-enum PhoneType: String {
-    case cell = "📱"
-    case home = "🏠"
-    case work = "☎️"
+enum ContactType {
+    case cellPhone
+    case homePhone
+    case workPhone
+    case privateEmail
+    case workEmail
+    case social
+    case webAddress
 }
