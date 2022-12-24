@@ -15,7 +15,6 @@ final class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         aboutTextView.text = user.info.intro
     }
 }

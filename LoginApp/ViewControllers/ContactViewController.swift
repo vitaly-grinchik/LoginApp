@@ -14,6 +14,7 @@ final class ContactViewController: UIViewController {
     // Labels
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userSurnameLabel: UILabel!
+    @IBOutlet weak var userAgeLabel: UILabel!
     @IBOutlet weak var mobilePhoneLabel: UILabel!
     @IBOutlet weak var privateEmailLabel: UILabel!
     @IBOutlet weak var homePhoneLabel: UILabel!
@@ -33,6 +34,7 @@ final class ContactViewController: UIViewController {
     private func fillInLabels() {
         userNameLabel.text = user.info.name
         userSurnameLabel.text = user.info.surname
+        userAgeLabel.text = "\(user.info.age)"
         
         mobilePhoneLabel.text = user.info.contacts[.mobilePhone]
         privateEmailLabel.text = user.info.contacts[.privateEmail]

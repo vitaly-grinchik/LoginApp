@@ -9,47 +9,42 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
 
+    
+    // MARK: - IB Outlets
     @IBOutlet weak var greetingLabel: UILabel!
     
     @IBOutlet weak var userPhoto: UIImageView!
     
+    // MARK: - Public property
     var user: Account!
     
+    // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let tabBarViewControllers = tabBarVC.viewControllers else { return }
         
-        tabBarViewControllers.forEach { viewController in
-            switch viewController {
-            case let aboutVC as AboutViewController: aboutVC.user = user
-            case let navigationVC as UINavigationController:
-                let naviVCs = navigationVC.viewControllers
-                naviVCs.forEach { viewController in
-                    switch viewController {
-                    case let contactVC as ContactViewController: contactVC.user = user
-                    case let editContactVC as EditContactViewController: editContactVC.user = user
-                    default: return
-                    }
+        tabBarViewControllers.forEach { vc in
+            if let aboutVC = vc as? AboutViewController {
+                aboutVC.user = user
+            } else if let navigationVC = vc as? UINavigationController {
+                if let contactVC = navigationVC.topViewController as? ContactViewController {
+                    contactVC.user = user
                 }
-            default: return
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        greetingLabel.text = "Welcome,\n" + user.info.name + "!"
     }
     
     override func viewDidLayoutSubviews() {
         setupUserPhoto()
     }
     
-    private func setupUI() {
-        greetingLabel.text = "Welcome,\n" + user.info.name + "!"
-    }
-    
+    // MARK: - Setup view(s)
     private func setupUserPhoto() {
         userPhoto.image = UIImage(named: user.info.photoFileName)
         userPhoto.contentMode = .scaleAspectFill

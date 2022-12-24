@@ -13,7 +13,7 @@ final class EditContactViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userSurnameLabel: UILabel!
     @IBOutlet weak var mobilePhoneTextField: UITextField!
-    @IBOutlet weak var personalEmailTextField: UITextField!
+    @IBOutlet weak var privateEmailTextField: UITextField!
     @IBOutlet weak var homePhoneTextField: UITextField!
     @IBOutlet weak var workPhoneTextField: UITextField!
     @IBOutlet weak var workEmailTextField: UITextField!
@@ -21,17 +21,26 @@ final class EditContactViewController: UIViewController {
     @IBOutlet weak var addressCityTextField: UITextField!
     @IBOutlet weak var addressStateTextField: UITextField!
     
-    @IBOutlet weak var saveButton: UIBarButtonItem!
-    
     var user: Account!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fillInTextFields()
     }
     
     // MARK: - IB Actions
-    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
-    }
     
+    private func fillInTextFields() {
+        mobilePhoneTextField.text = user.info.contacts[.mobilePhone] ?? ""
+        privateEmailTextField.text = user.info.contacts[.privateEmail] ?? ""
+        
+        homePhoneTextField.text = user.info.contacts[.homePhone] ?? ""
+        
+        workPhoneTextField.text = user.info.contacts[.workPhone] ?? ""
+        workEmailTextField.text = user.info.contacts[.workEmail] ?? ""
+        
+        addressTextField.text = user.info.address.addressString
+        addressCityTextField.text = user.info.address.city
+        addressStateTextField.text = user.info.address.state
+    }
 }

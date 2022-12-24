@@ -5,7 +5,7 @@
 //  Created by Виталий Гринчик on 21.12.22.
 //
 
-var account = Account(userName: "1", userPassword: "1", isActive: true, recoveryQuestion: "", recoveryAnswer: "", info: person)
+var account = Account(userName: "1", userPassword: "1", info: person)
 
 var person = Person(name: "Vitaly", surname: "Grinchik", age: 49, contacts: contacts, intro: intro, photoFileName: "GVM", address: address)
 
@@ -17,7 +17,7 @@ var contacts: [ContactType: String] = [.mobilePhone: "+375 33 120-88-06",
                                        .twitter: "@virtualizer",
                                        .webAddress: "mypage.com"]
 
-var address = Address(state: "Belarus", city: "Minsk", street: "Pobeditelej Ave.", building: "75А", appartment: "100")
+var address = Address(state: "Belarus", city: "Minsk", street: "улица Карла Либкнехта", building: "88-1", appartment: "100")
 
 var intro = """
 If a mutable approach isn’t your thing, then below you’ll find an alternative immutable variant that generates a deck using flatMap and map. Notice how deck is a constant, denoted by a let.

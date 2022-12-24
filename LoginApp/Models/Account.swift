@@ -9,11 +9,6 @@ import Foundation
 struct Account {
     var userName: String
     var userPassword: String
-    
-    var isActive: Bool
-    var recoveryQuestion: String
-    var recoveryAnswer: String
-    
     var info: Person
 }
 

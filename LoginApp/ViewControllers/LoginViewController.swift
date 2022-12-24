@@ -14,14 +14,15 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var userPasswordField: UITextField!
     
     // MARK: - Private properties
-    private var currentAccount = account
+    private var user = account
     
     // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomVC = segue.destination as? WelcomeViewController else { return }
-        welcomVC.user = currentAccount
+        welcomVC.user = user
     }
    
+    // To remove keyboard if not needed
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -29,8 +30,8 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func loginTapped() {
-        if userNameField.text == currentAccount.userName, userPasswordField.text == currentAccount.userPassword {
-            performSegue(withIdentifier: "showWelcomVC", sender: nil)
+        if userNameField.text == user.userName, userPasswordField.text == user.userPassword {
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
        } else {
             showAlert("Invalid login or password",
                       "Please, enter correct login and password")
@@ -40,12 +41,12 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotNameButtonTapped() {
         showAlert("Oops!",
-                  "Your name: \(currentAccount.userName)")
+                  "Your name: \(user.userName)")
     }
     
     @IBAction func forgotPassButtonTapped() {
         showAlert("Oops!",
-                  "Your password: " + currentAccount.userPassword)
+                  "Your password: " + user.userPassword)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
