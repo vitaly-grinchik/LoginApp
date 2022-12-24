@@ -37,7 +37,7 @@ final class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingLabel.text = "Welcome,\n" + user.info.name + "!"
+        greetingLabel.text = "Привет,\n" + user.info.name + "!"
     }
     
     override func viewDidLayoutSubviews() {

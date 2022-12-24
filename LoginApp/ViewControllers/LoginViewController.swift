@@ -33,20 +33,20 @@ final class LoginViewController: UIViewController {
         if userNameField.text == user.userName, userPasswordField.text == user.userPassword {
             performSegue(withIdentifier: "showWelcomeVC", sender: nil)
        } else {
-            showAlert("Invalid login or password",
-                      "Please, enter correct login and password")
+            showAlert("Неверное имя и/или пароль",
+                      "Введите правильные имя и пароль")
                 { _ in self.userPasswordField.text = "" }
         }
     }
     
     @IBAction func forgotNameButtonTapped() {
-        showAlert("Oops!",
-                  "Your name: \(user.userName)")
+        showAlert("Опаньки!",
+                  "Ваше имя: \(user.userName)")
     }
     
     @IBAction func forgotPassButtonTapped() {
-        showAlert("Oops!",
-                  "Your password: " + user.userPassword)
+        showAlert("Так и быть...",
+                  "Ваш пароль: " + user.userPassword)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

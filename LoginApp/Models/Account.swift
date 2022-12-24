@@ -7,31 +7,32 @@
 import Foundation
 
 struct Account {
-    var userName: String
-    var userPassword: String
-    var info: Person
+    let userName: String
+    let userPassword: String
+    let info: Person
 }
 
 struct Person {
     let name: String
     let surname: String
     let age: Int
-    var contacts: [ContactType: String]
+    let contacts: [ContactType: String]
     let intro: String
     let photoFileName: String
     var address: Address
 }
 
 struct Address {
-    var state: String
-    var city: String
-    var street: String
-    var building: String
-    var appartment: String
-    
+    let state: String
+    let city: String
+    let street: String
+    let building: String
+    let appartment: String
+    let mapImageFileName: String
     var addressString: String {
         "\(appartment)-\(building), \(street)"
     }
+    
 }
 
 enum ContactType {

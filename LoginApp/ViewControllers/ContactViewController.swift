@@ -26,9 +26,25 @@ final class ContactViewController: UIViewController {
     
     var user: Account!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let mapVC = segue.destination as? MapViewController else { return }
+        mapVC.mapImageFileName = user.info.address.mapImageFileName
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUserPhoto()
         fillInLabels()
+    }
+     
+    // MARK: - Setup view(s)
+    private func setupUserPhoto() {
+        userPhoto.image = UIImage(named: user.info.photoFileName)
+        userPhoto.contentMode = .scaleAspectFill
+        userPhoto.layer.borderWidth = 5
+        userPhoto.layer.borderColor = UIColor.white.cgColor
+        userPhoto.layer.cornerRadius = 15
+        
     }
     
     private func fillInLabels() {
