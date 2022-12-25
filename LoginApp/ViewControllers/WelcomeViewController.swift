@@ -13,7 +13,11 @@ final class WelcomeViewController: UIViewController {
     // MARK: - IB Outlets
     @IBOutlet weak var greetingLabel: UILabel!
     
-    @IBOutlet weak var userPhoto: UIImageView!
+    @IBOutlet weak var userPhoto: UIImageView! {
+        didSet {
+            setupUserPhoto()
+        }
+    }
     
     // MARK: - Public property
     var user: Account!
@@ -38,10 +42,6 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         greetingLabel.text = "Привет,\n" + user.info.name + "!"
-    }
-    
-    override func viewDidLayoutSubviews() {
-        setupUserPhoto()
     }
     
     // MARK: - Setup view(s)
