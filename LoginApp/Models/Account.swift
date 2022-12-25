@@ -9,9 +9,39 @@ struct Account {
     let userName: String
     let userPassword: String
     let info: Person
-    
+
     static func getAccount() -> Account {
-        let intro = """
+        Account(
+            userName: "1",
+            userPassword: "1",
+            info: Person.getPersonData()
+            )
+    }
+}
+
+struct Person {
+    let name: String
+    let surname: String
+    let age: Int
+    let contacts: [ContactType: String]
+    let intro: String
+    let photoFileName: String
+    var address: Address
+    
+    static func getPersonData() -> Person {
+        Person(
+            name: "Виталий",
+            surname: "Гринчик",
+            age: 49,
+            contacts:
+                [.mobilePhone: "",
+                 .homePhone: "+375 17 235-03-91",
+                 .workPhone: "+375 17 368-25-98",
+                 .privateEmail: "vitaly.grinchik@email.com",
+                 .workEmail: "vitaly.grinchik@email.com",
+                 .webAddress: "entrydell.com"
+                ],
+            intro: """
 Привет!
 
 Меня зовут Виталий.
@@ -27,47 +57,11 @@ struct Account {
 Почему именно iOS? Крутая компания, классные продукты! И мне кажеться, на вопрос "Чем занимаешься?" круто отвечать: "Я - iOS-разработчик"!
 
 PS: Все контакты реальные 😊
-"""
-        
-        let account = Account(
-            userName: "1",
-            userPassword: "1",
-            info: Person(
-                name: "Виталий",
-                surname: "Гринчик",
-                age: 49,
-                contacts:
-                    [.mobilePhone: "",
-                     .homePhone: "+375 17 235-03-91",
-                     .workPhone: "+375 17 368-25-98",
-                     .privateEmail: "vitaly.grinchik@email.com",
-                     .workEmail: "vitaly.grinchik@email.com",
-                     .webAddress: "entrydell.com"
-                    ],
-                intro: intro,
-                photoFileName: "GVM",
-                address: Address(
-                    state: "Беларусь",
-                    city: "Минск",
-                    street: "Ул. Высокая",
-                    building: "11Д",
-                    appartment: "112",
-                    mapImageFileName: "MyHome"
-                )
-            )
+""",
+            photoFileName: "GVM",
+            address: Address.getPersonAddress()
         )
-        return account
     }
-}
-
-struct Person {
-    let name: String
-    let surname: String
-    let age: Int
-    let contacts: [ContactType: String]
-    let intro: String
-    let photoFileName: String
-    var address: Address
 }
 
 struct Address {
@@ -77,8 +71,20 @@ struct Address {
     let building: String
     let appartment: String
     let mapImageFileName: String
+    
     var addressString: String {
         "\(appartment)-\(building), \(street)"
+    }
+    
+    static func getPersonAddress() -> Address {
+        Address(
+            state: "Беларусь",
+            city: "Минск",
+            street: "Ул. Высокая",
+            building: "11Д",
+            appartment: "112",
+            mapImageFileName: "MyHome"
+        )
     }
 }
 
