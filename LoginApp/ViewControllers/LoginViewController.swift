@@ -14,7 +14,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var userPasswordField: UITextField!
     
     // MARK: - Private properties
-    private var user = account
+    private var user = Account.getAccount()
     
     // MARK: - Override methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
