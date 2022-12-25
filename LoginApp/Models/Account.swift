@@ -12,8 +12,8 @@ struct Account {
 
     static func getAccount() -> Account {
         Account(
-            userName: "1",
-            userPassword: "1",
+            userName: "Vitaly",
+            userPassword: "Swiftbook",
             info: Person.getPersonInfo()
         )
     }

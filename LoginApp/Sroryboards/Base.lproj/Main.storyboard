@@ -426,7 +426,13 @@
                             <constraint firstItem="DyL-80-TOv" firstAttribute="top" secondItem="SRp-MJ-4Ia" secondAttribute="top" constant="16" id="ynO-Lh-yTX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Карта" id="ttS-1L-zeX"/>
+                    <navigationItem key="navigationItem" title="Карта" id="ttS-1L-zeX">
+                        <barButtonItem key="rightBarButtonItem" title="Закрыть" id="OwT-PD-fcS">
+                            <connections>
+                                <action selector="closeBarButtonTapped:" destination="THt-61-dtq" id="HuG-14-0wc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapImage" destination="DyL-80-TOv" id="OPL-Kf-V6J"/>
                     </connections>

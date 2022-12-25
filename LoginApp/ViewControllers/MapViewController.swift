@@ -18,6 +18,10 @@ class MapViewController: UIViewController {
         setupMapView()
     }
     
+    @IBAction func closeBarButtonTapped(_ sender: UIBarButtonItem) {
+        view.window?.rootViewController?.dismiss(animated: true)
+    }
+    
     // MARK: - Setup view(s)
     private func setupMapView() {
         mapImage.image = UIImage(named: mapImageFileName)
