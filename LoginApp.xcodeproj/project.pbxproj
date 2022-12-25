@@ -71,7 +71,6 @@
 				D8C46EBC295263E20091EB5D /* Sroryboards */,
 				D8C46EBA2952637F0091EB5D /* App */,
 				D8C46EBD295263F70091EB5D /* Resources */,
-				D8BD4E1F293A803000D63077 /* Info.plist */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -81,6 +80,7 @@
 			children = (
 				D8BD4E11293A802800D63077 /* AppDelegate.swift */,
 				D8BD4E13293A802800D63077 /* SceneDelegate.swift */,
+				D8BD4E1F293A803000D63077 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 488U3567BQ;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 488U3567BQ;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

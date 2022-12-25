@@ -19,3 +19,4 @@ final class AboutViewController: UIViewController {
         aboutTextView.isEditable = false
     }
 }
+    
