@@ -14,8 +14,8 @@ struct Account {
         Account(
             userName: "1",
             userPassword: "1",
-            info: Person.getPersonData()
-            )
+            info: Person.getPersonInfo()
+        )
     }
 }
 
@@ -28,17 +28,17 @@ struct Person {
     let photoFileName: String
     var address: Address
     
-    static func getPersonData() -> Person {
+    static func getPersonInfo() -> Person {
         Person(
             name: "Виталий",
             surname: "Гринчик",
             age: 49,
             contacts:
-                [.mobilePhone: "",
+                [.mobilePhone: "+375 29 367-16-56",
                  .homePhone: "+375 17 235-03-91",
                  .workPhone: "+375 17 368-25-98",
-                 .privateEmail: "vitaly.grinchik@email.com",
-                 .workEmail: "vitaly.grinchik@email.com",
+                 .privateEmail: "vitaly.grinchik@gmail.com",
+                 .workEmail: "vitaly.grinchik@gmail.com",
                  .webAddress: "entrydell.com"
                 ],
             intro: """

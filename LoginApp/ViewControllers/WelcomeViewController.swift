@@ -24,10 +24,10 @@ final class WelcomeViewController: UIViewController {
         guard let tabBarVC = segue.destination as? UITabBarController else { return }
         guard let tabBarViewControllers = tabBarVC.viewControllers else { return }
         
-        tabBarViewControllers.forEach { vc in
-            if let aboutVC = vc as? AboutViewController {
+        tabBarViewControllers.forEach {
+            if let aboutVC = $0 as? AboutViewController {
                 aboutVC.user = user
-            } else if let navigationVC = vc as? UINavigationController {
+            } else if let navigationVC = $0 as? UINavigationController {
                 if let contactVC = navigationVC.topViewController as? ContactViewController {
                     contactVC.user = user
                 }
