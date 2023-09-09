@@ -19,7 +19,11 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func closeBarButtonTapped(_ sender: UIBarButtonItem) {
-        view.window?.rootViewController?.dismiss(animated: true)
+// Выход на начальный ViewController
+        //        view.window?.rootViewController?.dismiss(animated: true)
+        
+        // Выход из текущего NavigationController
+        navigationController?.dismiss(animated: true)
     }
     
     // MARK: - Setup view(s)

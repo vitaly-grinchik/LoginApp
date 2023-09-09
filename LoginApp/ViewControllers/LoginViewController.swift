@@ -65,7 +65,8 @@ final class LoginViewController: UIViewController {
 extension LoginViewController {
     func showAlert(_ title: String,
                    _ message: String,
-                   _ handler: ((UIAlertAction) -> Void)? = nil)
+                   _ handler: ((UIAlertAction) -> Void)? = nil
+    )
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: handler)
